@@ -40,5 +40,13 @@
   "ACL": {
     "dataSource": "vasopportunitesAppDb",
     "public": false
+  },
+  "adminCare": {
+    "dataSource": "vasopportunitesAppDb",
+    "public": true
+  },
+  "customerCare": {
+    "dataSource": "vasopportunitesAppDb",
+    "public": true
   }
 }

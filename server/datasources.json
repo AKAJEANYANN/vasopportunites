@@ -8,6 +8,6 @@
     "name": "vasopportunitesAppDb",
     "user": "vasopportunitesapp_ao1o_user",
     "connector": "postgresql",
-    "ssl":true
+    "ssl": true
   }
 }
