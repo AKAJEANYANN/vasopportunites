@@ -16,9 +16,6 @@
     },
     "selfCarePhone": {
       "type": "string"
-    },
-    "selfCarePrenom": {
-      "type": "string"
     }
   },
   "validations": [],
