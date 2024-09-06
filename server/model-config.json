@@ -27,6 +27,18 @@
   },
   "appAccessToken": {
     "dataSource": "vasopportunitesAppDb",
+    "public": true
+  },
+  "Role": {
+    "dataSource": "vasopportunitesAppDb",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "vasopportunitesAppDb",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "vasopportunitesAppDb",
     "public": false
   }
 }

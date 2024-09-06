@@ -12,38 +12,48 @@
       "defaultFn": "uuidv4"
     },
     "musicName": {
-      "type": "string"
+      "type": "string",
+      "default": ""
     },
     "musicApprouve": {
       "type": "boolean",
       "default": true
     },
     "musicDateApprouve": {
-      "type": "date"
+      "type": "date",
+      "default": ""
     },
     "musicDateDesapprouve": {
-      "type": "date"
+      "type": "date",
+      "default": ""
     },
     "musicDateCreated": {
-      "type": "date"
+      "type": "date",
+      "defaultFn": "now"
     },
     "musicActif": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": true
     },
     "musicDateActif": {
-      "type": "date"
+      "type": "date",
+      "default": ""
     },
     "musicDateDesactif": {
-      "type": "date"
+      "type": "date",
+      "default": ""
     },
     "musicSupprime": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": false
     },
     "musicDateSupprime": {
-      "type": "date"
+      "type": "date",
+      "default": ""
     },
     "musicAudioUrl": {
-      "type": "string"
+      "type": "string",
+      "default": ""
     }
   },
   "validations": [],

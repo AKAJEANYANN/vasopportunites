@@ -12,49 +12,64 @@
       "defaultFn": "uuidv4"
     },
     "operatorLogo": {
-      "type": "string"
+      "type": "string",
+      "default": ""
     },
     "operatorName": {
-      "type": "string"
+      "type": "string",
+      "default": ""
     },
     "operatorLabel": {
-      "type": "string"
+      "type": "string",
+      "default": ""
     },
     "operatorServiceName": {
-      "type": "string"
+      "type": "string",
+      "default": ""
     },
     "focusColor": {
-      "type": "string"
+      "type": "string",
+      "default": ""
     },
     "btnBgCallToActionColor": {
-      "type": "string"
+      "type": "string",
+      "default": ""
     },
     "btnTextCallToActionColor": {
-      "type": "string"
+      "type": "string",
+      "default": ""
     },
     "btnBgColor": {
-      "type": "string"
+      "type": "string",
+      "default": ""
     },
     "btnTextColor": {
-      "type": "string"
+      "type": "string",
+      "default": ""
     },
     "bgColor": {
-      "type": "string"
+      "type": "string",
+      "default": ""
     },
     "operatorLabelColor": {
-      "type": "string"
+      "type": "string",
+      "default": ""
     },
     "primaryTextColor": {
-      "type": "string"
+      "type": "string",
+      "default": ""
     },
     "dialCode": {
-      "type": "string"
+      "type": "string",
+      "default": ""
     },
     "startNumbers": {
-      "type": "string"
+      "type": "string",
+      "default": ""
     },
     "lengthNumber": {
-      "type": "string"
+      "type": "string",
+      "default": ""
     },
     "enableOperator": {
       "type": "boolean",
@@ -65,7 +80,8 @@
       "default": true
     },
     "defaultLanguage": {
-      "type": "string"
+      "type": "string",
+      "default": ""
     }
   },
   "validations": [],

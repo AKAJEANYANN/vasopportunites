@@ -12,10 +12,40 @@
       "defaultFn": "uuidv4"
     },
     "selfCareName": {
-      "type": "string"
+      "type": "string",
+      "default": ""
     },
     "selfCarePhone": {
-      "type": "string"
+      "type": "string",
+      "default": ""
+    },
+    "selfCareDateCreation": {
+      "type": "date",
+      "defaultFn": "now"
+    },
+    "selfCareApprouve": {
+      "type": "boolean",
+      "default": true
+    },
+    "selfCareDateApprouve": {
+      "type": "date",
+      "default": ""
+    },
+    "selfCareCode": {
+      "type": "string",
+      "default": ""
+    },
+    "selfCareActif": {
+      "type": "boolean",
+      "default": true
+    },
+    "selfCareDesactifDate": {
+      "type": "date",
+      "default": ""
+    },
+    "device_fcm_token": {
+      "type": "string",
+      "default": ""
     }
   },
   "validations": [],
@@ -32,6 +62,19 @@
       }
     }
   },
-  "acls": [],
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$unauthenticated",
+      "permission": "DENY"
+    },
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW"
+    }
+  ],
   "methods": {}
 }

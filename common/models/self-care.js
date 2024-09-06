@@ -9,7 +9,7 @@ module.exports = function(Selfcare) {
         // const message = "Votre code de connexion est : " ;
 
         var msisdn = req.body.numero;
-        var numdemo = "+2250011223344";
+        var numdemo = "0000000000";
        
         // var code = Math.floor(Math.random() * 9000) + 1000;
         // var code = (msisdn != numdemo) ?  Math.floor(Math.random() * 90000) + 1000 : 1111;
@@ -46,7 +46,8 @@ module.exports = function(Selfcare) {
 
                         }
                         else {// Retourner une reponse
-                            cb(null, [code, use])};
+                            cb(null, user); 
+                            }
 
                         })            
                 }
@@ -68,12 +69,12 @@ module.exports = function(Selfcare) {
                                 // TODO : Envoyer SMS
                                 // notify.sendSMS(message + code, msisdn); 
                                 // Retourner une reponse
-                                cb(null, [code, user]); 
+                                cb(null, user); 
                                 
                                 
                             }
                             else {// Retourner une reponse
-                                cb(null, [code, user]);
+                                cb(null, user); 
                             }; 
 
                         });
