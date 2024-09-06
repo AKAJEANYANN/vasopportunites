@@ -1,0 +1,75 @@
+{
+  "name": "operator",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "string",
+      "id": true,
+      "defaultFn": "uuidv4"
+    },
+    "operatorLogo": {
+      "type": "string"
+    },
+    "operatorName": {
+      "type": "string"
+    },
+    "operatorLabel": {
+      "type": "string"
+    },
+    "operatorServiceName": {
+      "type": "string"
+    },
+    "focusColor": {
+      "type": "string"
+    },
+    "btnBgCallToActionColor": {
+      "type": "string"
+    },
+    "btnTextCallToActionColor": {
+      "type": "string"
+    },
+    "btnBgColor": {
+      "type": "string"
+    },
+    "btnTextColor": {
+      "type": "string"
+    },
+    "bgColor": {
+      "type": "string"
+    },
+    "operatorLabelColor": {
+      "type": "string"
+    },
+    "primaryTextColor": {
+      "type": "string"
+    },
+    "dialCode": {
+      "type": "string"
+    },
+    "startNumbers": {
+      "type": "string"
+    },
+    "lengthNumber": {
+      "type": "string"
+    },
+    "enableOperator": {
+      "type": "boolean",
+      "default": true
+    },
+    "autoApprouveMusic": {
+      "type": "boolean",
+      "default": true
+    },
+    "defaultLanguage": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

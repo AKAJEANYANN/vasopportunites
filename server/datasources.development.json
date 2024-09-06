@@ -1,0 +1,14 @@
+{
+    "vasopportunitesAppDb": {
+      "host": "dpg-crasndaj1k6c73ckbib0-a.oregon-postgres.render.com",
+      "port": 5432,
+      "url": "",
+      "database": "vasopportunitesapp",
+      "password": "RxqKbCyqBFnLdcnumFDKZzg8o5aVkXEK",
+      "name": "vasopportunitesAppDb",
+      "user": "vasopportunitesapp_user",
+      "connector": "postgresql",
+      "ssl":true
+    }
+  }
+  

@@ -1,0 +1,53 @@
+{
+  "name": "music",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "string",
+      "id": true,
+      "defaultFn": "uuidv4"
+    },
+    "musicName": {
+      "type": "string"
+    },
+    "musicApprouve": {
+      "type": "boolean",
+      "default": true
+    },
+    "musicDateApprouve": {
+      "type": "date"
+    },
+    "musicDateDesapprouve": {
+      "type": "date"
+    },
+    "musicDateCreated": {
+      "type": "date"
+    },
+    "musicActif": {
+      "type": "boolean"
+    },
+    "musicDateActif": {
+      "type": "date"
+    },
+    "musicDateDesactif": {
+      "type": "date"
+    },
+    "musicSupprime": {
+      "type": "boolean"
+    },
+    "musicDateSupprime": {
+      "type": "date"
+    },
+    "musicAudioUrl": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
