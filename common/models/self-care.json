@@ -28,8 +28,7 @@
       "default": true
     },
     "selfCareDateApprouve": {
-      "type": "date",
-      "default": ""
+      "type": "date"
     },
     "selfCareCode": {
       "type": "string",
@@ -40,8 +39,7 @@
       "default": true
     },
     "selfCareDesactifDate": {
-      "type": "date",
-      "default": ""
+      "type": "date"
     },
     "device_fcm_token": {
       "type": "string",

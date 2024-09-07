@@ -20,12 +20,10 @@
       "default": true
     },
     "musicDateApprouve": {
-      "type": "date",
-      "default": ""
+      "type": "date"
     },
     "musicDateDesapprouve": {
-      "type": "date",
-      "default": ""
+      "type": "date"
     },
     "musicDateCreated": {
       "type": "date",
@@ -36,20 +34,17 @@
       "default": true
     },
     "musicDateActif": {
-      "type": "date",
-      "default": ""
+      "type": "date"
     },
     "musicDateDesactif": {
-      "type": "date",
-      "default": ""
+      "type": "date"
     },
     "musicSupprime": {
       "type": "boolean",
       "default": false
     },
     "musicDateSupprime": {
-      "type": "date",
-      "default": ""
+      "type": "date"
     },
     "musicAudioUrl": {
       "type": "string",
