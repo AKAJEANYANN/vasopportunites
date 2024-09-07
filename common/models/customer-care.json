@@ -28,8 +28,7 @@
       "default": true
     },
     "customerCareDateApprouve": {
-      "type": "date",
-      "default": ""
+      "type": "date"
     },
     "customerCareCode": {
       "type": "string",
@@ -40,8 +39,7 @@
       "default": false
     },
     "dateDeleteCust": {
-      "type": "date",
-      "default": ""
+      "type": "date"
     },
     "device_fcm_token": {
       "type": "string",

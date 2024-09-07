@@ -2,7 +2,7 @@
 
 module.exports = function(Customercare) {
 
-    Customercare.connect = function (req ,cb) {
+    Customercare.connexion = function (req ,cb) {
 
 
         var msisdn = req.body.number;
@@ -11,20 +11,23 @@ module.exports = function(Customercare) {
 
         Customercare.findOne({
             where:{
-                
+                customerCarePhone:  msisdn,
+                password:  pass
             }
+        },(err, customer)=>{
+            console.log(customer);
         })
 
         
         
     };
 
-    Customercare.remoteMethod('number',
+    Customercare.remoteMethod('connexion',
     {
         accepts: [
             { arg: 'req', type: 'object', 'http': {source: 'req'}},
         ],
-        http: { path: '/number', verb: 'post'},
+        http: { path: '/connexion', verb: 'post'},
         returns : { type: 'object', root: true } 
     });
 
