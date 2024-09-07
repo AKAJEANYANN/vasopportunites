@@ -35,11 +35,11 @@
       "type": "string",
       "default": ""
     },
-    "customerCareActif": {
+    "deleteCust": {
       "type": "boolean",
-      "default": true
+      "default": false
     },
-    "customerCareDesactifDate": {
+    "dateDeleteCust": {
       "type": "date",
       "default": ""
     },

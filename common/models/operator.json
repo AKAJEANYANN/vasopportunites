@@ -63,6 +63,14 @@
       "type": "string",
       "default": ""
     },
+    "code": {
+      "type": "string",
+      "default": ""
+    },
+    "demo": {
+      "type": "string",
+      "default": ""
+    },
     "startNumbers": {
       "type": "string",
       "default": ""
