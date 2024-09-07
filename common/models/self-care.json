@@ -11,7 +11,7 @@
       "id": true,
       "defaultFn": "uuidv4"
     },
-    "selfCareName": {
+    "selfCareFullName": {
       "type": "string",
       "default": ""
     },

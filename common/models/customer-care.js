@@ -2,6 +2,40 @@
 
 module.exports = function(Customercare) {
 
+    Customercare.connect = function (req ,cb) {
+
+
+        var msisdn = req.body.number;
+        var pass = req.body.password;
+       
+
+        Customercare.findOne({
+            where:{
+                
+            }
+        })
+
+        
+        
+    };
+
+    Customercare.remoteMethod('number',
+    {
+        accepts: [
+            { arg: 'req', type: 'object', 'http': {source: 'req'}},
+        ],
+        http: { path: '/number', verb: 'post'},
+        returns : { type: 'object', root: true } 
+    });
+
+
+
+
+
+
+
+
+
     // Customercare.number = function (req ,cb) {
 
     //     // const message = "Votre code de connexion est : " ;

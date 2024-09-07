@@ -11,7 +11,7 @@
       "id": true,
       "defaultFn": "uuidv4"
     },
-    "customerCareName": {
+    "customerCareFullName": {
       "type": "string",
       "default": ""
     },
