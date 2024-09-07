@@ -60,6 +60,14 @@
       "options": {
         "disableInclude": true
       }
+    },
+    "operator": {
+      "type": "belongsTo",
+      "model": "operator",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
     }
   },
   "acls": [

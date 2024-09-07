@@ -93,7 +93,16 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "selfCares": {
+      "type": "hasMany",
+      "model": "selfCare",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
   "acls": [],
   "methods": {}
 }
