@@ -8,8 +8,6 @@ module.exports = function(Selfcare) {
 
         // const message = "Votre code de connexion est : " ;
 
-        const Historiqueselfcare = Selfcare.app.models.historiqueselfcare;
-
         var codeDial = req.body.dialCode;
         var msisdn = req.body.numero;
         var idOperator = req.body.operatorId;
@@ -39,10 +37,6 @@ module.exports = function(Selfcare) {
                         password : `${code}`
                     },(err, use) => {
 
-                        Historiqueselfcare.create({
-                            dateSaving: Date(),
-                            selfCareId: use.id
-                        })
 
                         if(err) cb(err, null)
                         else if((codeDial + msisdn) != numdemo ) {
@@ -75,10 +69,6 @@ module.exports = function(Selfcare) {
                         },
                         (err, user) => {
 
-                            Historiqueselfcare.create({
-                                dateSaving: Date(),
-                                selfCareId: user.id
-                            })
 
                             if(err) cb(err, null);
 
@@ -87,7 +77,6 @@ module.exports = function(Selfcare) {
                                 // notify.sendSMS(message + code, msisdn); 
                                 // Retourner une reponse
                                 cb(null, user); 
-                                
                                 
                             }
                             else {// Retourner une reponse
