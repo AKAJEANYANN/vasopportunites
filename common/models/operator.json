@@ -76,8 +76,7 @@
       "default": ""
     },
     "lengthNumber": {
-      "type": "string",
-      "default": ""
+      "type": "number"
     },
     "enableOperator": {
       "type": "boolean",
