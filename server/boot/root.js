@@ -8,11 +8,11 @@
 module.exports = function (server) {
   var ds = server.dataSources.vasopportunitesAppDb;
   if (ds.connected) {
-     ds.autoupdate();
+     ds.automigrate();
     console.log("DB connected ✅")
   } else {
     ds.once('connected', function () {
-       ds.autoupdate();
+       ds.automigrate();
       console.log("DB connected ✅")
     });
   }
