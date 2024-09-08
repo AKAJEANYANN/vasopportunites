@@ -8,6 +8,8 @@ module.exports = function(Selfcare) {
 
         // const message = "Votre code de connexion est : " ;
 
+        const Historiqueselfcare = Selfcare.app.models.historiqueselfcare;
+
         var codeDial = req.body.dialCode;
         var msisdn = req.body.numero;
         var idOperator = req.body.operatorId;
@@ -36,7 +38,12 @@ module.exports = function(Selfcare) {
                     user.updateAttributes({
                         password : `${code}`
                     },(err, use) => {
-                        console.log(use);
+
+                        Historiqueselfcare.create({
+                            dateSaving: Date(),
+                            selfCareId: use.id
+                        })
+
                         if(err) cb(err, null)
                         else if((codeDial + msisdn) != numdemo ) {
                             // TODO : Envoyer SMS
@@ -59,6 +66,7 @@ module.exports = function(Selfcare) {
                     // creer l'utilisateur avec son numero de tel 
                     Selfcare.create(
                         {
+                            selfCareCode : codeDial,
                             username : codeDial + msisdn,
                             selfCarePhone: codeDial + msisdn,
                             email : codeDial + msisdn + '@vasopportunites.com',
@@ -66,6 +74,12 @@ module.exports = function(Selfcare) {
                             password : `${code}`,
                         },
                         (err, user) => {
+
+                            Historiqueselfcare.create({
+                                dateSaving: Date(),
+                                selfCareId: user.id
+                            })
+
                             if(err) cb(err, null);
 
                             else if((codeDial + msisdn) != numdemo) { 

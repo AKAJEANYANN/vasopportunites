@@ -66,6 +66,14 @@
       "options": {
         "nestRemoting": true
       }
+    },
+    "historiqueSelfCares": {
+      "type": "hasMany",
+      "model": "historiqueSelfCare",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
     }
   },
   "acls": [

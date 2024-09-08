@@ -1,0 +1,23 @@
+{
+  "name": "historiqueSelfCare",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "dateSaving": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "selfCare": {
+      "type": "belongsTo",
+      "model": "selfCare",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -48,5 +48,9 @@
   "customerCare": {
     "dataSource": "vasopportunitesAppDb",
     "public": true
+  },
+  "historiqueSelfCare": {
+    "dataSource": "vasopportunitesAppDb",
+    "public": true
   }
 }
