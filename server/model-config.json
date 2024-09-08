@@ -31,15 +31,15 @@
   },
   "Role": {
     "dataSource": "vasopportunitesAppDb",
-    "public": false
+    "public": true
   },
   "RoleMapping": {
     "dataSource": "vasopportunitesAppDb",
-    "public": false
+    "public": true
   },
   "ACL": {
     "dataSource": "vasopportunitesAppDb",
-    "public": false
+    "public": true
   },
   "adminCare": {
     "dataSource": "vasopportunitesAppDb",
