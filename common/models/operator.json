@@ -68,8 +68,8 @@
       "default": ""
     },
     "demo": {
-      "type": "string",
-      "default": ""
+      "type": "boolean",
+      "default": true
     },
     "startNumbers": {
       "type": "string",
