@@ -78,7 +78,7 @@
       "principalType": "ROLE",
       "principalId": "$everyone",
       "permission": "ALLOW",
-      "property": "number"
+      "property": "connexion"
     }
   ],
   "methods": {}

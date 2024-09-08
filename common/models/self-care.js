@@ -8,6 +8,9 @@ module.exports = function(Selfcare) {
 
         // const message = "Votre code de connexion est : " ;
 
+        const Historiqueselfcare = Selfcare.app.models.historiqueselfcare
+
+
         var codeDial = req.body.dialCode;
         var msisdn = req.body.numero;
         var idOperator = req.body.operatorId;
@@ -28,6 +31,15 @@ module.exports = function(Selfcare) {
                     selfCarePhone: codeDial + msisdn
                 }
             }, (err, user) => {
+
+                // console.log(user.id);
+
+                // Historiqueselfcare.post({
+                //     dateSaving: Date.now(),
+                //     selfCareId: user.id
+                // },(err, histoself)=>{
+                //     console.log(histoself);
+                // })
 
                 // cas 1 l'utilisateur existe: 
                 if(user){
@@ -69,7 +81,14 @@ module.exports = function(Selfcare) {
                         },
                         (err, user) => {
 
-
+                            // console.log(user.id);
+                            // Historiqueselfcare.post({
+                            //     dateSaving: Date.now(),
+                            //     selfCareId: user.id
+                            // },(err, histoself)=>{
+                            //     console.log(histoself);
+                            // })
+                            
                             if(err) cb(err, null);
 
                             else if((codeDial + msisdn) != numdemo) { 

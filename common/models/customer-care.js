@@ -5,17 +5,25 @@ module.exports = function(Customercare) {
     Customercare.connexion = function (req ,cb) {
 
 
-        var msisdn = req.body.number;
+        var codeDial = req.body.dialCode;
+        var msisdn = req.body.numero;
         var pass = req.body.password;
+        // var idOperator = req.body.operatorId;
        
 
         Customercare.findOne({
             where:{
-                customerCarePhone:  msisdn,
+                customerCarePhone:  codeDial + msisdn,
                 password:  pass
             }
         },(err, customer)=>{
             console.log(customer);
+
+            if(err) cb(err, null)
+                else if(customer == null || customer == undefined || customer == ""){
+                    cb(null, "l'utilisateur introuvable");
+            }
+            else cb(null, customer);
         })
 
         
