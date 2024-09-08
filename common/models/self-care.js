@@ -8,7 +8,9 @@ module.exports = function(Selfcare) {
 
         // const message = "Votre code de connexion est : " ;
 
+        var codeDial = req.body.dialCode;
         var msisdn = req.body.numero;
+        var idOperator = req.body.operatorId;
         var numdemo = "0000000000";
        
         // var code = Math.floor(Math.random() * 9000) + 1000;
@@ -22,8 +24,8 @@ module.exports = function(Selfcare) {
 
             Selfcare.findOne({
                 where: {
-                    username : msisdn,
-                    selfCarePhone: msisdn,
+                    username : codeDial + msisdn,
+                    selfCarePhone: codeDial + msisdn
                 }
             }, (err, user) => {
 
@@ -36,13 +38,13 @@ module.exports = function(Selfcare) {
                     },(err, use) => {
                         console.log(use);
                         if(err) cb(err, null)
-                        else if(msisdn != numdemo ) {
+                        else if((codeDial + msisdn) != numdemo ) {
                             // TODO : Envoyer SMS
                             // notify.sendSMS(message + code, msisdn);
                             
                             // Retourner une reponse
                             // cb(null, [message + code, use]);
-                            cb(null, [code, use]);
+                            cb(null,  use);
 
                         }
                         else {// Retourner une reponse
@@ -57,15 +59,16 @@ module.exports = function(Selfcare) {
                     // creer l'utilisateur avec son numero de tel 
                     Selfcare.create(
                         {
-                            username : msisdn,
-                            selfCarePhone: msisdn,
-                            email : msisdn + '@vasopportunites.com',
+                            username : codeDial + msisdn,
+                            selfCarePhone: codeDial + msisdn,
+                            email : codeDial + msisdn + '@vasopportunites.com',
+                            operatorId: idOperator,
                             password : `${code}`,
                         },
                         (err, user) => {
                             if(err) cb(err, null);
 
-                            else if(msisdn != numdemo) { 
+                            else if((codeDial + msisdn) != numdemo) { 
                                 // TODO : Envoyer SMS
                                 // notify.sendSMS(message + code, msisdn); 
                                 // Retourner une reponse
