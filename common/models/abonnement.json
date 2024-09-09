@@ -1,0 +1,51 @@
+{
+  "name": "abonnement",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "string",
+      "id": true,
+      "defaultFn": "uuidv4"
+    },
+    "dateCreation": {
+      "type": "date"
+    },
+    "actif": {
+      "type": "boolean",
+      "default": true
+    },
+    "duree": {
+      "type": "string",
+      "default": ""
+    },
+    "montant": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "validations": [],
+  "relations": {
+    "selfCare": {
+      "type": "belongsTo",
+      "model": "selfCare",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "forfait": {
+      "type": "belongsTo",
+      "model": "forfait",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

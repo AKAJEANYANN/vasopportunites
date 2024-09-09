@@ -1,0 +1,41 @@
+{
+  "name": "forfait",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "libelle": {
+      "type": "string"
+    },
+    "actif": {
+      "type": "boolean",
+      "default": true
+    },
+    "price": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "abonnements": {
+      "type": "hasMany",
+      "model": "abonnement",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "operator": {
+      "type": "belongsTo",
+      "model": "operator",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,26 @@
+{
+  "name": "historiqueCustomerCare",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "dateSaving": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "customerCare": {
+      "type": "belongsTo",
+      "model": "customerCare",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

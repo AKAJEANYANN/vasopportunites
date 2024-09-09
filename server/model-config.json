@@ -52,5 +52,37 @@
   "historiqueSelfCare": {
     "dataSource": "vasopportunitesAppDb",
     "public": true
+  },
+  "abonnement": {
+    "dataSource": "vasopportunitesAppDb",
+    "public": true
+  },
+  "forfait": {
+    "dataSource": "vasopportunitesAppDb",
+    "public": true
+  },
+  "historiqueCustomerCare": {
+    "dataSource": "vasopportunitesAppDb",
+    "public": true
+  },
+  "message": {
+    "dataSource": "vasopportunitesAppDb",
+    "public": true
+  },
+  "parametre": {
+    "dataSource": "vasopportunitesAppDb",
+    "public": true
+  },
+  "historiqueCustomSelf": {
+    "dataSource": "vasopportunitesAppDb",
+    "public": true
+  },
+  "historiqueAdminCare": {
+    "dataSource": "vasopportunitesAppDb",
+    "public": true
+  },
+  "categoryMessage": {
+    "dataSource": "vasopportunitesAppDb",
+    "public": true
   }
 }

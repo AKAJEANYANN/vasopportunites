@@ -100,6 +100,30 @@
       "options": {
         "nestRemoting": true
       }
+    },
+    "adminCares": {
+      "type": "hasMany",
+      "model": "adminCare",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "customerCares": {
+      "type": "hasMany",
+      "model": "customerCare",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "forfaits": {
+      "type": "hasMany",
+      "model": "forfait",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
     }
   },
   "acls": [],

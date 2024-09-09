@@ -74,6 +74,30 @@
       "options": {
         "nestRemoting": true
       }
+    },
+    "music": {
+      "type": "hasMany",
+      "model": "music",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "abonnements": {
+      "type": "hasMany",
+      "model": "abonnement",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "historiqueCustomSelves": {
+      "type": "hasMany",
+      "model": "historiqueCustomSelf",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
     }
   },
   "acls": [

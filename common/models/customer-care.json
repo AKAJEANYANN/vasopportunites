@@ -58,6 +58,38 @@
       "options": {
         "disableInclude": true
       }
+    },
+    "operator": {
+      "type": "belongsTo",
+      "model": "operator",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "music": {
+      "type": "hasMany",
+      "model": "music",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "historiqueCustomSelves": {
+      "type": "hasMany",
+      "model": "historiqueCustomSelf",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "historiqueCustomerCares": {
+      "type": "hasMany",
+      "model": "historiqueCustomerCare",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
     }
   },
   "acls": [

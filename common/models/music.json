@@ -52,7 +52,32 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "message": {
+      "type": "belongsTo",
+      "model": "message",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "selfCare": {
+      "type": "belongsTo",
+      "model": "selfCare",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "customerCare": {
+      "type": "belongsTo",
+      "model": "customerCare",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
   "acls": [],
   "methods": {}
 }

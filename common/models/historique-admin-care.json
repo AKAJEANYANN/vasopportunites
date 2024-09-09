@@ -1,0 +1,26 @@
+{
+  "name": "historiqueAdminCare",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "dateSaving": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "adminCare": {
+      "type": "belongsTo",
+      "model": "adminCare",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

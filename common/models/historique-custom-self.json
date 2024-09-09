@@ -1,0 +1,34 @@
+{
+  "name": "historiqueCustomSelf",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "date": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "customerCare": {
+      "type": "belongsTo",
+      "model": "customerCare",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "selfCare": {
+      "type": "belongsTo",
+      "model": "selfCare",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

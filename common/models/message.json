@@ -1,0 +1,44 @@
+{
+  "name": "message",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "contentFr": {
+      "type": "string"
+    },
+    "contentEn": {
+      "type": "string"
+    },
+    "default": {
+      "type": "boolean",
+      "default": true
+    },
+    "idOperator": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "categoryMessage": {
+      "type": "belongsTo",
+      "model": "categoryMessage",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "music": {
+      "type": "hasMany",
+      "model": "music",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
