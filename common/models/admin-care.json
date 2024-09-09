@@ -28,8 +28,7 @@
       "default": true
     },
     "adminCareDateApprouve": {
-      "type": "date",
-      "default": ""
+      "type": "date"
     },
     "adminCareCode": {
       "type": "string",
@@ -40,8 +39,7 @@
       "default": true
     },
     "adminCareDesactifDate": {
-      "type": "date",
-      "default": ""
+      "type": "date"
     },
     "device_fcm_token": {
       "type": "string",

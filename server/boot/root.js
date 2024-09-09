@@ -5,14 +5,14 @@
 
 'use strict';
 
-module.exports = async function (server) {
+module.exports = function (server) {
   var ds = server.dataSources.vasopportunitesAppDb;
   if (ds.connected) {
-     await ds.autoupdate();
+     ds.autoupdate();
     console.log("DB connected ✅")
   } else {
-    ds.once('connected', async function () {
-       await ds.autoupdate();
+    ds.once('connected', function () {
+       ds.autoupdate();
       console.log("DB connected ✅")
     });
   }
