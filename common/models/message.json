@@ -6,18 +6,26 @@
     "validateUpsert": true
   },
   "properties": {
+    "id": {
+      "type": "string",
+      "id": true,
+      "defaultFn": "uuidv4"
+    },
     "contentFr": {
-      "type": "string"
+      "type": "string",
+      "default": ""
     },
     "contentEn": {
-      "type": "string"
+      "type": "string",
+      "default": ""
     },
     "default": {
       "type": "boolean",
       "default": true
     },
     "idOperator": {
-      "type": "string"
+      "type": "string",
+      "default": ""
     }
   },
   "validations": [],

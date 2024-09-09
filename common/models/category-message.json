@@ -6,11 +6,18 @@
     "validateUpsert": true
   },
   "properties": {
+    "id": {
+      "type": "string",
+      "id": true,
+      "defaultFn": "uuidv4"
+    },
     "libelleFr": {
-      "type": "string"
+      "type": "string",
+      "default": ""
     },
     "libelleEn": {
-      "type": "string"
+      "type": "string",
+      "default": ""
     }
   },
   "validations": [],
