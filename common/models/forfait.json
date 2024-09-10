@@ -19,15 +19,7 @@
       "type": "boolean",
       "default": true
     },
-    "devise": {
-      "type": "string",
-      "default": ""
-    },
     "price": {
-      "type": "string",
-      "default": ""
-    },
-    "order": {
       "type": "number"
     }
   },

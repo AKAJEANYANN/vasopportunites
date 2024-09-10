@@ -4,11 +4,35 @@ const notify = require("../../server/global/notify")
 
 module.exports = function(Selfcare) {
 
+    // Selfcare.afterRemote('login', function(ctx, accessToken, next) {
+    //     if (!accessToken) {
+    //       return next(new Error('Connexion échouée, aucun token d\'accès généré.'));
+    //     }
+    
+    //     const Historiqueselfcare = Selfcare.app.models.historiqueSelfCare;
+    //     const userId = accessToken.userId;
+    //     const dateConnexion = new Date();
+    
+    //     // Créer un enregistrement dans la table Historiqueadmincare
+    //     Historiqueselfcare.create({
+    //       selfCareId: userId,
+    //       dateSaving: dateConnexion
+    //     }, function(err, record) {
+    //       if (err) {
+    //         console.log('Erreur lors de la création de l\'historique de connexion :', err);
+    //         return next(err);
+    //       }
+    //       console.log('Historique de connexion enregistré pour l\'utilisateur avec ID:', userId);
+    //       next();
+    //     });
+    //   });
+
+
     Selfcare.number = function (req ,cb) {
 
         // const message = "Votre code de connexion est : " ;
 
-        const Historiqueselfcare = Selfcare.app.models.historiqueselfcare
+        const Historiqueselfcare = Selfcare.app.models.historiqueSelfCare;
 
 
         var codeDial = req.body.dialCode;
@@ -32,15 +56,6 @@ module.exports = function(Selfcare) {
                 }
             }, (err, user) => {
 
-                // console.log(user.id);
-
-                // Historiqueselfcare.post({
-                //     dateSaving: Date.now(),
-                //     selfCareId: user.id
-                // },(err, histoself)=>{
-                //     console.log(histoself);
-                // })
-
                 // cas 1 l'utilisateur existe: 
                 if(user){
                     
@@ -48,6 +63,14 @@ module.exports = function(Selfcare) {
                     user.updateAttributes({
                         password : `${code}`
                     },(err, use) => {
+
+
+                        Historiqueselfcare.create({
+                            dateSaving: Date.now(),
+                            selfCareId: use.id
+                        },(err, histoself)=>{
+                            //console.log(histoself);
+                        })
 
 
                         if(err) cb(err, null)
@@ -81,13 +104,12 @@ module.exports = function(Selfcare) {
                         },
                         (err, user) => {
 
-                            // console.log(user.id);
-                            // Historiqueselfcare.post({
-                            //     dateSaving: Date.now(),
-                            //     selfCareId: user.id
-                            // },(err, histoself)=>{
-                            //     console.log(histoself);
-                            // })
+                            Historiqueselfcare.create({
+                                dateSaving: Date.now(),
+                                selfCareId: user.id
+                            },(err, histoself)=>{
+                                // console.log(histoself);
+                            })
                             
                             if(err) cb(err, null);
 
