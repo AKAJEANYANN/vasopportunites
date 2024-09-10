@@ -11,6 +11,10 @@
       "id": true,
       "defaultFn": "uuidv4"
     },
+    "nomAbonne": {
+      "type": "string",
+      "default":""
+    },
     "dateCreation": {
       "type": "date",
       "defaultFn":"now"
