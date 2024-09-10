@@ -89,6 +89,10 @@
     "defaultLanguage": {
       "type": "string",
       "default": ""
+    },
+    "devise": {
+      "type": "string",
+      "default": ""
     }
   },
   "validations": [],
