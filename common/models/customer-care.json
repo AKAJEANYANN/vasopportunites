@@ -110,7 +110,7 @@
       "principalType": "ROLE",
       "principalId": "$everyone",
       "permission": "ALLOW",
-      "property": "connexion"
+      "property": "search"
     }
   ],
   "methods": {}
