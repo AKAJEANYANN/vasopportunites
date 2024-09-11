@@ -36,16 +36,20 @@ module.exports = function(Customercare) {
 
         const dateConnexion = new Date();
 
+        var codeDial = req.body.dialCode;
         var msisdn = req.body.numero;
         var idcust = req.body.customercareId;
+        var idOperator = req.body.operatorId;
+        var code = 1111;
 
         Selfcare.findOne({ 
             where:{
-                username: msisdn,
-                selfCarePhone: msisdn
+                username: codeDial + msisdn,
+                selfCarePhone: codeDial + msisdn
             }
 
         }, (err, self) =>{
+            console.log(self);
 
             if(self){
 
@@ -53,10 +57,41 @@ module.exports = function(Customercare) {
                     customerCareId: idcust,
                     selfCareId: self.id,
                     dateSaving: dateConnexion
-                },(err, histo)=>{})
+                },(err, histo)=>{
+                    console.log(histo);
+                })
 
-                cb(null, self);
+                if(err) cb(err, null)
+                    else
+                        cb(null, self);
 
+            }else{
+
+                Selfcare.create(
+                    {
+                        selfCareCode : codeDial,
+                        username : codeDial + msisdn,
+                        selfCarePhone: codeDial + msisdn,
+                        email : codeDial + msisdn + '@vasopportunites.com',
+                        operatorId: idOperator,
+                        password : `${code}`,
+                    },
+                    (err, user) => {
+                        console.log(user);
+
+                        Historiquecustomself.create({
+                            customerCareId: idcust,
+                            selfCareId: user.id,
+                            dateSaving: dateConnexion
+                        },(err, histoself)=>{
+                            console.log(histoself);
+                        })
+                        
+                        if(err) cb(err, null)
+                            else
+                                cb(null, user); 
+                        
+                    });
             }
         })
     };
