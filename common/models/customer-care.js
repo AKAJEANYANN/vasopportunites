@@ -99,7 +99,7 @@ module.exports = function(Customercare) {
     Customercare.remoteMethod('search',
     {
         accepts: { arg: 'req', type: 'object', 'http': {source: 'req'}},
-        http: { path: '/search', verb: 'get'},
+        http: { path: '/search', verb: 'post'},
         returns : { type: 'object', root: true } 
     });
 
