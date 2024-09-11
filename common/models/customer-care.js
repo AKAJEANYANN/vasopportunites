@@ -25,4 +25,47 @@ module.exports = function(Customercare) {
         });
       });
 
+
+
+    // rechercher un abonné a travers un customer
+
+    Customercare.search = function(req, cb){ 
+
+        const Historiquecustomself = Customercare.app.models.historiqueCustomSelf;
+        const Selfcare = Customercare.app.models.selfCare;
+
+        const dateConnexion = new Date();
+
+        var msisdn = req.body.numero;
+        var idcust = req.body.customercareId;
+
+        Selfcare.findOne({ 
+            where:{
+                username: msisdn,
+                selfCarePhone: msisdn
+            }
+
+        }, (err, self) =>{
+
+            if(self){
+
+                Historiquecustomself.create({
+                    customerCareId: idcust,
+                    selfCareId: self.id,
+                    dateSaving: dateConnexion
+                },(err, histo)=>{})
+
+                cb(null, self);
+
+            }
+        })
+    };
+   
+    Customercare.remoteMethod('search',
+    {
+        accepts: { arg: 'req', type: 'object', 'http': {source: 'req'}},
+        http: { path: '/search', verb: 'get'},
+        returns : { type: 'object', root: true } 
+    });
+
 };

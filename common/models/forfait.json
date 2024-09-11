@@ -20,7 +20,8 @@
       "default": true
     },
     "price": {
-      "type": "number"
+      "type": "string",
+      "default":""
     }
   },
   "validations": [],

@@ -11,7 +11,7 @@
       "id": true,
       "defaultFn": "uuidv4"
     },
-    "date": {
+    "dateSaving": {
       "type": "date",
       "defaultFn":"now"
     }
