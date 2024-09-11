@@ -93,6 +93,10 @@
     "devise": {
       "type": "string",
       "default": ""
+    },
+    "sizeSpace": {
+      "type": "number",
+      "default": 0
     }
   },
   "validations": [],
