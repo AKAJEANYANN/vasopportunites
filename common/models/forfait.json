@@ -22,6 +22,10 @@
     "price": {
       "type": "string",
       "default":""
+    },
+    "duree": {
+      "type": "number",
+      "default":0
     }
   },
   "validations": [],
