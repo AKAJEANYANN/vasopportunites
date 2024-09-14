@@ -15,11 +15,11 @@
       "type": "string",
       "default": ""
     },
-    "musicApprouve": {
-      "type": "boolean",
-      "default": true
+    "musicEtat": {
+      "type": "string",
+      "default": "EN_ATTENTE"
     },
-    "musicDateApprouve": {
+    "musicActionDate": {
       "type": "date"
     },
     "musicDateDesapprouve": {
