@@ -21,11 +21,11 @@
     },
     "price": {
       "type": "string",
-      "default":""
+      "default": ""
     },
     "duree": {
       "type": "number",
-      "default":0
+      "default": 0
     }
   },
   "validations": [],

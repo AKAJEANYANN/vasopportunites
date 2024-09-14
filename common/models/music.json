@@ -49,6 +49,10 @@
     "musicAudioUrl": {
       "type": "string",
       "default": ""
+    },
+    "operatorId": {
+      "type": "string",
+      "default": ""
     }
   },
   "validations": [],
@@ -69,9 +73,9 @@
         "nestRemoting": true
       }
     },
-    "customerCare": {
+    "adminCare": {
       "type": "belongsTo",
-      "model": "customerCare",
+      "model": "adminCare",
       "foreignKey": "",
       "options": {
         "nestRemoting": true

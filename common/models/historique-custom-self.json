@@ -13,7 +13,7 @@
     },
     "dateSaving": {
       "type": "date",
-      "defaultFn":"now"
+      "defaultFn": "now"
     }
   },
   "validations": [],

@@ -13,11 +13,11 @@
     },
     "nomAbonne": {
       "type": "string",
-      "default":""
+      "default": ""
     },
     "dateCreation": {
       "type": "date",
-      "defaultFn":"now"
+      "defaultFn": "now"
     },
     "actif": {
       "type": "boolean",

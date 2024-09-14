@@ -67,14 +67,6 @@
         "nestRemoting": true
       }
     },
-    "music": {
-      "type": "hasMany",
-      "model": "music",
-      "foreignKey": "",
-      "options": {
-        "nestRemoting": true
-      }
-    },
     "historiqueCustomSelves": {
       "type": "hasMany",
       "model": "historiqueCustomSelf",

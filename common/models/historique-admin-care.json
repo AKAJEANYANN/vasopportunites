@@ -13,7 +13,7 @@
     },
     "dateSaving": {
       "type": "date",
-      "defaultFn":"now"
+      "defaultFn": "now"
     }
   },
   "validations": [],
@@ -27,18 +27,19 @@
       }
     }
   },
-  "acls": [ {
-    "accessType": "*",
-    "principalType": "ROLE",
-    "principalId": "$unauthenticated",
-    "permission": "DENY"
-  },
-  {
-    "accessType": "*",
-    "principalType": "ROLE",
-    "principalId": "$authenticated",
-    "permission": "ALLOW"
-  }
-],
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$unauthenticated",
+      "permission": "DENY"
+    },
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW"
+    }
+  ],
   "methods": {}
 }
