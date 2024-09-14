@@ -22,22 +22,9 @@
     "musicActionDate": {
       "type": "date"
     },
-    "musicDateDesapprouve": {
-      "type": "date"
-    },
     "musicDateCreated": {
       "type": "date",
       "defaultFn": "now"
-    },
-    "musicActif": {
-      "type": "boolean",
-      "default": true
-    },
-    "musicDateActif": {
-      "type": "date"
-    },
-    "musicDateDesactif": {
-      "type": "date"
     },
     "musicSupprime": {
       "type": "boolean",
