@@ -2,7 +2,7 @@
 
 module.exports = function(Music) {
 
-    Music.countMusicByStatus = async function(idOperator, cb) {
+    Music.countMusicByStatus = async function(idOperator) {
         try {
           const currentDate = new Date();
           const startOfDay = new Date(currentDate.setHours(0, 0, 0, 0));  // Début de la journée
@@ -35,9 +35,9 @@ module.exports = function(Music) {
             }
           };
     
-          cb(null, result);
+          return (null, result);
         } catch (err) {
-          cb(err);
+          return (err);
         }
       };
     
@@ -48,5 +48,7 @@ module.exports = function(Music) {
         http: { path: '/count-music-by-status', verb: 'get' },
         returns: { arg: 'data', type: 'object' }
       });
+
+
 
 };
