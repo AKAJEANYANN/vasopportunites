@@ -2,7 +2,7 @@
 
 module.exports = function(Music) {
 
-    Music.countMusicByStatus = async function(idOperator) {
+    Music.countMusicByStatus = async function(idOperator, cb) {
         try {
           const currentDate = new Date();
           const startOfDay = new Date(currentDate.setHours(0, 0, 0, 0));  // Début de la journée
@@ -35,13 +35,12 @@ module.exports = function(Music) {
             }
           };
     
-          return (null, result);
+          cb(null, result);
         } catch (err) {
-          return (err);
+          cb(err);
         }
       };
     
-      
       
       Music.remoteMethod('countMusicByStatus', {
         accepts: 
