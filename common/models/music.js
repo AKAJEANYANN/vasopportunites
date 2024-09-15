@@ -27,10 +27,12 @@ module.exports = function(Music) {
     
           // Retourner les résultats
           const result = {
-            date: currentDate,
             pendingMusic: pendingMusic,
-            validatedMusicToday: validatedMusic,
-            rejectedMusicToday: rejectedMusic
+            operation:{
+                date: currentDate,
+                validate: validatedMusic,
+                reject: rejectedMusic
+            }
           };
     
           cb(null, result);
@@ -39,7 +41,7 @@ module.exports = function(Music) {
         }
       };
     
-      // Exposer la méthode via une API REST
+      
       Music.remoteMethod('countMusicByStatus', {
         accepts: 
             { arg: 'idOperator', type: 'string'},
