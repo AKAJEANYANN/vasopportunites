@@ -4,7 +4,6 @@ module.exports = function(Music) {
 
     Music.countMusicByStatus = async function(idOperator) {
         try {
-          const date = Date().now;
           const currentDate = new Date();
           const startOfDay = new Date(currentDate.setHours(0, 0, 0, 0));  // Début de la journée
           const endOfDay = new Date(currentDate.setHours(23, 59, 59, 999)); // Fin de la journée
@@ -30,7 +29,7 @@ module.exports = function(Music) {
           const result = {
             pendingMusic: pendingMusic,
             operation:{
-                date: date,
+                date: currentDate,
                 validate: validatedMusic,
                 reject: rejectedMusic
             }
