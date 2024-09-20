@@ -95,6 +95,13 @@
       "principalId": "$everyone",
       "permission": "ALLOW",
       "property": "valideMusic"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "refusMusic"
     }
   ],
   "methods": {}
