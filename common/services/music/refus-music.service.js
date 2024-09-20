@@ -34,7 +34,7 @@ module.exports = function refusMusicService(Music) {
             { arg: 'idMessage', type: 'string', required: true},
             { arg: 'idAdmincare', type: 'string', required: true}
         ],
-        http: { path: '/refus-music', verb: 'get' },
+        http: { path: '/refus-music', verb: 'post' },
         returns: { arg: 'data', type: 'object' }
       });
 

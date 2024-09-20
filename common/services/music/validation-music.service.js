@@ -32,7 +32,7 @@ module.exports = function valideMusicService(Music) {
             { arg: 'idMusic', type: 'string', required: true},
             { arg: 'idAdmincare', type: 'string', required: true}
         ],
-        http: { path: '/music-validation', verb: 'get' },
+        http: { path: '/music-validation', verb: 'post' },
         returns: { arg: 'data', type: 'object' }
       });
 
