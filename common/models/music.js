@@ -11,5 +11,5 @@ module.exports = function(Music) {
   validationMusicService(Music)
 
   refusMusicService(Music)
-  
+
 };
