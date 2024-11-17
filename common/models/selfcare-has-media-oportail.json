@@ -1,0 +1,52 @@
+{
+  "name": "selfcareHasMedia_oportail",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "string",
+      "id": true,
+      "defaultFn": "uuidv4"
+    },
+    "like": {
+      "type": "boolean"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "selfCareOportail": {
+      "type": "belongsTo",
+      "model": "selfCare_oportail",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "mediaOportail": {
+      "type": "belongsTo",
+      "model": "media_oportail",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$unauthenticated",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW"
+    }
+  ],
+  "methods": {}
+}

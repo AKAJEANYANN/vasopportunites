@@ -1,0 +1,163 @@
+{
+  "name": "operator_oportail",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "string",
+      "id": true,
+      "defaultFn": "uuidv4"
+    },
+    "operatorLogo": {
+      "type": "string",
+      "default": ""
+    },
+    "operatorName": {
+      "type": "string",
+      "default": ""
+    },
+    "operatorLabel": {
+      "type": "string",
+      "default": ""
+    },
+    "operatorServiceName": {
+      "type": "string",
+      "default": ""
+    },
+    "focusColor": {
+      "type": "string",
+      "default": ""
+    },
+    "btnBgCallToActionColor": {
+      "type": "string",
+      "default": ""
+    },
+    "btnTextCallToActionColor": {
+      "type": "string",
+      "default": ""
+    },
+    "btnBgColor": {
+      "type": "string",
+      "default": ""
+    },
+    "btnTextColor": {
+      "type": "string",
+      "default": ""
+    },
+    "bgColor": {
+      "type": "string",
+      "default": ""
+    },
+    "operatorLabelColor": {
+      "type": "string",
+      "default": ""
+    },
+    "primaryTextColor": {
+      "type": "string",
+      "default": ""
+    },
+    "dialCode": {
+      "type": "string",
+      "default": ""
+    },
+    "code": {
+      "type": "string",
+      "default": ""
+    },
+    "demo": {
+      "type": "boolean",
+      "default": false
+    },
+    "startNumbers": {
+      "type": "string",
+      "default": ""
+    },
+    "lengthNumber": {
+      "type": "number"
+    },
+    "enableOperator": {
+      "type": "boolean",
+      "default": true
+    },
+    "autoApprouveMusic": {
+      "type": "boolean",
+      "default": true
+    },
+    "defaultLanguage": {
+      "type": "string",
+      "default": ""
+    },
+    "devise": {
+      "type": "string",
+      "default": ""
+    },
+    "sizeSpace": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "validations": [],
+  "relations": {
+    "accessTokens": {
+      "type": "hasMany",
+      "model": "AccessToken_oportail",
+      "polymorphic": {
+        "foreignKey": "userId",
+        "discriminator": "principalType"
+      },
+      "options": {
+        "disableInclude": true
+      }
+    },
+    "selfCareOportails": {
+      "type": "hasMany",
+      "model": "selfCare_oportail",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "messageOportails": {
+      "type": "hasMany",
+      "model": "message_oportail",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "administratorOportails": {
+      "type": "hasMany",
+      "model": "administrator_oportail",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "mediaOportails": {
+      "type": "hasMany",
+      "model": "media_oportail",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$unauthenticated",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW"
+    }
+  ],
+  "methods": {}
+}

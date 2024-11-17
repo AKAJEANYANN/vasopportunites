@@ -1,0 +1,103 @@
+{
+  "name": "selfCare_oportail",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "string",
+      "id": true,
+      "defaultFn": "uuidv4"
+    },
+    "selfcareFullName": {
+      "type": "string",
+      "default": ""
+    },
+    "selfcarePhone": {
+      "type": "string",
+      "default": ""
+    },
+    "selfcareDateCreation": {
+      "type": "date",
+      "defaultFn": "now"
+    },
+    "selfcareApprouve": {
+      "type": "boolean",
+      "default": true
+    },
+    "selfcareDateApprouve": {
+      "type": "date"
+    },
+    "selfcareCode": {
+      "type": "string",
+      "default": ""
+    },
+    "selfcareActif": {
+      "type": "boolean",
+      "default": true
+    },
+    "selfcareDesactifDate": {
+      "type": "date"
+    },
+    "device_fcm_token": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "validations": [],
+  "relations": {
+    "accessTokens": {
+      "type": "hasMany",
+      "model": "AccessToken_oportail",
+      "polymorphic": {
+        "foreignKey": "userId",
+        "discriminator": "principalType"
+      },
+      "options": {
+        "disableInclude": true
+      }
+    },
+    "messageOportails": {
+      "type": "hasMany",
+      "model": "message_oportail",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "operatorOportail": {
+      "type": "belongsTo",
+      "model": "operator_oportail",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "mediaOportails": {
+      "type": "hasMany",
+      "model": "media_oportail",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      },
+      "through": "selfcareHasMedia_oportail"
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$unauthenticated",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW"
+    }
+  ],
+  "methods": {}
+}

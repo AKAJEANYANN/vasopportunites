@@ -1,0 +1,94 @@
+{
+  "name": "administrator_oportail",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "string",
+      "id": true,
+      "defaultFn": "uuidv4"
+    },
+    "administratorName": {
+      "type": "string",
+      "default": ""
+    },
+    "administratorPhone": {
+      "type": "string",
+      "default": ""
+    },
+    "administratorDateCreation": {
+      "type": "date",
+      "defaultFn": "now"
+    },
+    "administratorApprouve": {
+      "type": "boolean",
+      "default": true
+    },
+    "administratorDateApprouve": {
+      "type": "date"
+    },
+    "administratorCode": {
+      "type": "string",
+      "default": ""
+    },
+    "administratorActif": {
+      "type": "boolean",
+      "default": true
+    },
+    "administratorDesactifDate": {
+      "type": "date"
+    },
+    "device_fcm_token": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "validations": [],
+  "relations": {
+    "accessTokens": {
+      "type": "hasMany",
+      "model": "AccessToken_oportail",
+      "polymorphic": {
+        "foreignKey": "userId",
+        "discriminator": "principalType"
+      },
+      "options": {
+        "disableInclude": true
+      }
+    },
+    "operatorOportail": {
+      "type": "belongsTo",
+      "model": "operator_oportail",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "messageOportails": {
+      "type": "hasMany",
+      "model": "message_oportail",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$unauthenticated",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW"
+    }
+  ],
+  "methods": {}
+}

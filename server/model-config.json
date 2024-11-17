@@ -84,5 +84,33 @@
   "categoryMessage": {
     "dataSource": "vasopportunitesAppDb",
     "public": true
+  },
+  "administrator_oportail": {
+    "dataSource": "vasopportunitesAppDb",
+    "public": true
+  },
+  "media_oportail": {
+    "dataSource": "vasopportunitesAppDb",
+    "public": true
+  },
+  "message_oportail": {
+    "dataSource": "vasopportunitesAppDb",
+    "public": true
+  },
+  "operator_oportail": {
+    "dataSource": "vasopportunitesAppDb",
+    "public": true
+  },
+  "selfcareHasMedia_oportail": {
+    "dataSource": "vasopportunitesAppDb",
+    "public": true
+  },
+  "selfCare_oportail": {
+    "dataSource": "vasopportunitesAppDb",
+    "public": true
+  },
+  "AccessToken_oportail": {
+    "dataSource": "vasopportunitesAppDb",
+    "public": false
   }
 }
