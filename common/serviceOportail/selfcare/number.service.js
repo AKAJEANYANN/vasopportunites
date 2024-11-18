@@ -1,6 +1,6 @@
-module.exports = function numberService(Selfcare) {
+module.exports = function numberService(Selfcareoportail) {
 
-    Selfcare.number = function (req ,cb) {
+    Selfcareoportail.number = function (req ,cb) {
 
         // const message = "Votre code de connexion est : " ;
 
@@ -21,7 +21,7 @@ module.exports = function numberService(Selfcare) {
 
         if(msisdn != null && msisdn != undefined && msisdn != ""){
 
-            Selfcare.findOne({
+            Selfcareoportail.findOne({
                 where: {
                     username : codeDial + msisdn,
                     selfCarePhone: codeDial + msisdn
@@ -65,7 +65,7 @@ module.exports = function numberService(Selfcare) {
                 else {
 
                     // creer l'utilisateur avec son numero de tel 
-                    Selfcare.create(
+                    Selfcareoportail.create(
                         {
                             selfCareCode : codeDial,
                             username : codeDial + msisdn,
@@ -106,7 +106,7 @@ module.exports = function numberService(Selfcare) {
         
     };
 
-    Selfcare.remoteMethod('number',
+    Selfcareoportail.remoteMethod('number',
     {
         accepts: [
             { arg: 'req', type: 'object', 'http': {source: 'req'}},
