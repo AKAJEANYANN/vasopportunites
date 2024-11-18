@@ -11,34 +11,34 @@
       "id": true,
       "defaultFn": "uuidv4"
     },
-    "selfcareFullName": {
+    "selfCareFullName": {
       "type": "string",
       "default": ""
     },
-    "selfcarePhone": {
+    "selfCarePhone": {
       "type": "string",
       "default": ""
     },
-    "selfcareDateCreation": {
+    "selfCareDateCreation": {
       "type": "date",
       "defaultFn": "now"
     },
-    "selfcareApprouve": {
+    "selfCareApprouve": {
       "type": "boolean",
       "default": true
     },
-    "selfcareDateApprouve": {
+    "selfCareDateApprouve": {
       "type": "date"
     },
-    "selfcareCode": {
+    "selfCareCode": {
       "type": "string",
       "default": ""
     },
-    "selfcareActif": {
+    "selfCareActif": {
       "type": "boolean",
       "default": true
     },
-    "selfcareDesactifDate": {
+    "selfCareDesactifDate": {
       "type": "date"
     },
     "device_fcm_token": {
