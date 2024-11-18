@@ -48,17 +48,6 @@
   },
   "validations": [],
   "relations": {
-    "accessTokens": {
-      "type": "hasMany",
-      "model": "AccessToken_oportail",
-      "polymorphic": {
-        "foreignKey": "userId",
-        "discriminator": "principalType"
-      },
-      "options": {
-        "disableInclude": true
-      }
-    },
     "messageOportails": {
       "type": "hasMany",
       "model": "message_oportail",
