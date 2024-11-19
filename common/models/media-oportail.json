@@ -19,15 +19,23 @@
       "type": "string",
       "default": ""
     },
+    "mediaType": {
+      "type": "string",
+      "default": ""
+    },
     "mediaDateCreate": {
       "type": "date"
     },
     "mediaDuration": {
-      "type": "number"
+      "type": "number",
+      "default": 0
     },
     "mediaVisible": {
       "type": "boolean",
       "default": true
+    },
+    "mediaDateLimite": {
+      "type": "date"
     }
   },
   "validations": [],

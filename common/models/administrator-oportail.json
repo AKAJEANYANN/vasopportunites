@@ -74,6 +74,14 @@
       "options": {
         "nestRemoting": true
       }
+    },
+    "mediaOportails": {
+      "type": "hasMany",
+      "model": "media_oportail",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
     }
   },
   "acls": [
