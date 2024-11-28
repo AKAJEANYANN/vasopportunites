@@ -33,9 +33,9 @@
         "nestRemoting": true
       }
     },
-    "administratorOportail": {
+    "adminCareOportail": {
       "type": "belongsTo",
-      "model": "administrator_oportail",
+      "model": "adminCare_oportail",
       "foreignKey": "",
       "options": {
         "nestRemoting": true

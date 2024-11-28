@@ -128,9 +128,9 @@
         "nestRemoting": true
       }
     },
-    "administratorOportails": {
+    "adminCareOportails": {
       "type": "hasMany",
-      "model": "administrator_oportail",
+      "model": "adminCare_oportail",
       "foreignKey": "",
       "options": {
         "nestRemoting": true
