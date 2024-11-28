@@ -85,7 +85,7 @@
     "dataSource": "vasopportunitesAppDb",
     "public": true
   },
-  "administrator_oportail": {
+  "adminCare_oportail": {
     "dataSource": "vasopportunitesAppDb",
     "public": true
   },
