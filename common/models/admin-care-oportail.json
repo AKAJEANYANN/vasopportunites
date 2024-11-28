@@ -1,5 +1,5 @@
 {
-  "name": "administrator_oportail",
+  "name": "adminCare_oportail",
   "base": "User",
   "idInjection": true,
   "options": {
@@ -11,34 +11,34 @@
       "id": true,
       "defaultFn": "uuidv4"
     },
-    "administratorName": {
+    "adminCareName": {
       "type": "string",
       "default": ""
     },
-    "administratorPhone": {
+    "adminCarePhone": {
       "type": "string",
       "default": ""
     },
-    "administratorDateCreation": {
+    "adminCareDateCreation": {
       "type": "date",
       "defaultFn": "now"
     },
-    "administratorApprouve": {
+    "adminCareApprouve": {
       "type": "boolean",
       "default": true
     },
-    "administratorDateApprouve": {
+    "adminCareDateApprouve": {
       "type": "date"
     },
-    "administratorCode": {
+    "adminCareCode": {
       "type": "string",
       "default": ""
     },
-    "administratorActif": {
+    "adminCareActif": {
       "type": "boolean",
       "default": true
     },
-    "administratorDesactifDate": {
+    "adminCareDesactifDate": {
       "type": "date"
     },
     "device_fcm_token": {
