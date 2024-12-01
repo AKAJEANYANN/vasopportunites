@@ -11,8 +11,17 @@
       "id": true,
       "defaultFn": "uuidv4"
     },
-    "libelle": {
-      "type": "string"
+    "title": {
+      "type": "string",
+      "default": ""
+    },
+    "content": {
+      "type": "string",
+      "default": ""
+    },
+    "isRead": {
+      "type": "boolean",
+      "default": false
     }
   },
   "validations": [],
