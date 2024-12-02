@@ -19,6 +19,9 @@
       "type": "string",
       "default": ""
     },
+    "dateContent": {
+      "type": "date"
+    },
     "isRead": {
       "type": "boolean",
       "default": false
