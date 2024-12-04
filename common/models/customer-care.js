@@ -1,5 +1,6 @@
 'use strict';
 
+const numberService = require("../services/customercare/number.service");
 const searchService = require("../services/customercare/search.service");
 
 module.exports = function(Customercare) {
@@ -30,5 +31,6 @@ module.exports = function(Customercare) {
 
 
     searchService(Customercare)
+    numberService(Customercare)
 
 };

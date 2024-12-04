@@ -1,5 +1,7 @@
 'use strict';
 
+const numberService = require("../services/admincare/number.service");
+
 module.exports = function(Admincare) {
 
     
@@ -26,4 +28,8 @@ module.exports = function(Admincare) {
         });
       });
 
+
+
+
+      numberService(Admincare)
 };
